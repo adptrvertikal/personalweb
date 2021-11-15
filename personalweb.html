@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        /* Create a column layout with Flexbox */
+        
+        .row {
+            display: flex;
+        }
+        /* Left column (menu) */
+        
+        .left {
+            flex: 35%;
+            padding: 15px 0;
+        }
+        
+        .left h2 {
+            padding-left: 8px;
+        }
+        /* Right column (page content) */
+        
+        .right {
+            flex: 65%;
+            padding: 15px;
+        }
+        /* Style the search box */
+        
+        #mySearch {
+            width: 100%;
+            font-size: 14px;
+            padding: 11px;
+            border: 1px solid #ddd;
+        }
+        /* Style the navigation menu inside the left column */
+        
+        #myMenu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #myMenu li a {
+            padding: 12px;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            display: block
+        }
+        
+        #myMenu li a:hover {
+            background-color: rgb(8, 190, 245);
+        }
+        
+        .title {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h2 class="title" class="centered"><b>Selamat Datang</b></h2>
+    </header>
+
+    <p>Mau nyari apa?? ketik di kolom search, kalo masih gak ketemu tanya pak RT.</p>
+
+    <div class="row">
+        <div class="left" style="background-color:rgb(21, 75, 224);">
+            <h2>Menu</h2>
+            <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="mau cepet dari disini.." title="Type in a category">
+            <ul id="myMenu">
+                <li><a href="tentangyangpunyaweb.html">Tentang Aku</a></li>
+                <li><a href="riwayatpekerjaan.html">Riwayat Pekerjaan</a></li>
+                <li><a href="kompetensi.html">Kompetensi</a></li>
+            </ul>
+        </div>
+
+        <div class="right " style="background-color:#ddd; ">
+            <div class="container ">
+                <img src="web.jpg " width="800 " height="500 ">
+                <div class="centered ">DI BUAT PEMULA DI TUTOR JUARA!!!
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            function myFunction() {
+                var input, filter, ul, li, a, i;
+                input = document.getElementById("mySearch ");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myMenu ");
+                li = ul.getElementsByTagName("li ");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a ")[0];
+                    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = " ";
+                    } else {
+                        li[i].style.display = "none ";
+                    }
+                }
+            }
+        </script>
+
+</body>
+
+</html>
