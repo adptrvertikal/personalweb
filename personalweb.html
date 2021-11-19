@@ -1,126 +1,66 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        .container {
-            position: relative;
-            text-align: center;
-            color: white;
-        }
-        
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        /* Create a column layout with Flexbox */
-        
-        .row {
-            display: flex;
-        }
-        /* Left column (menu) */
-        
-        .left {
-            flex: 35%;
-            padding: 15px 0;
-        }
-        
-        .left h2 {
-            padding-left: 8px;
-        }
-        /* Right column (page content) */
-        
-        .right {
-            flex: 65%;
-            padding: 15px;
-        }
-        /* Style the search box */
-        
-        #mySearch {
-            width: 100%;
-            font-size: 14px;
-            padding: 11px;
-            border: 1px solid #ddd;
-        }
-        /* Style the navigation menu inside the left column */
-        
-        #myMenu {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        #myMenu li a {
-            padding: 12px;
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            display: block
-        }
-        
-        #myMenu li a:hover {
-            background-color: rgb(8, 190, 245);
-        }
-        
-        .title {
-            color: red;
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
 
+.sidenav {
+  height: 100%;
+  width: 190px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(6, 6, 7);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration:navajowhite;
+  font-size: 20px;
+  color: #f2f6f8;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #1341da;
+}
+
+.main {
+  margin-left: 170px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 </head>
-
 <body>
 
-    <header>
-        <h2 class="title" class="centered"><b>Selamat Datang</b></h2>
-    </header>
+<div class="sidenav">
+  <a href="tentangyangpunyaweb.html">Tentang aku</a>
+  <a href="riwayatpekerjaan.html">Riwayat pekerjaan</a>
+  <a href="kompetensi.html">Kompetensi</a>
+  <a href="#contact">Contact</a>
+</div>
 
-    <p>Mau nyari apa?? ketik di kolom search, kalo masih gak ketemu tanya pak RT.</p>
-
-    <div class="row">
-        <div class="left" style="background-color:rgb(21, 75, 224);">
-            <h2>Menu</h2>
-            <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="mau cepet dari disini.." title="Type in a category">
-            <ul id="myMenu">
-                <li><a href="tentangyangpunyaweb.html">Tentang Aku</a></li>
-                <li><a href="riwayatpekerjaan.html">Riwayat Pekerjaan</a></li>
-                <li><a href="kompetensi.html">Kompetensi</a></li>
-            </ul>
-        </div>
-
-        <div class="right " style="background-color:#ddd; ">
-            <div class="container ">
-                <img src="web.jpg " width="800 " height="500 ">
-                <div class="centered ">DI BUAT PEMULA DI TUTOR JUARA!!!
-                </div>
-            </div>
-        </div>
-
-
-        <script>
-            function myFunction() {
-                var input, filter, ul, li, a, i;
-                input = document.getElementById("mySearch ");
-                filter = input.value.toUpperCase();
-                ul = document.getElementById("myMenu ");
-                li = ul.getElementsByTagName("li ");
-                for (i = 0; i < li.length; i++) {
-                    a = li[i].getElementsByTagName("a ")[0];
-                    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                        li[i].style.display = " ";
-                    } else {
-                        li[i].style.display = "none ";
-                    }
-                }
-            }
-        </script>
-
+<div class="main">
+  <h2>Hi, i'm Vertikal</h2>
+  <p>This sidebar is of full height (100%) and always shown.</p>
+  <p>Scroll down the page to see the result.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</div>
+   
 </body>
-
-</html>
+</html> 
