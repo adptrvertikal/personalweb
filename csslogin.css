@@ -11,6 +11,10 @@ h2 {
 form {
     border: 3px solid #0f8fe4;
     border-width: 5px 5px;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 
@@ -20,24 +24,24 @@ input[type=text],
 input[type=password] {
     border-left: deeppink;
     width: 50%;
-    padding: 12px 40px;
-    margin: 8px 0px;
+    padding: auto;
+    margin: auto;
     display: block;
     border: 1px solid #ccc;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 
 /* Set a style for all buttons */
 
 button {
-    background-color: #04AA6D;
+    background-color: #12e69b;
     color: white;
-    padding: 14px 20px;
+    padding: 10px 5px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 50%;
+    width: 40%;
 }
 
 
@@ -52,15 +56,15 @@ button:hover {
 
 .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
+    margin: 4px 0 1px 0;
 }
 
 
 /* logo skoladigital */
 
 img.avatar {
-    width: 10%;
-    border-radius: 40%;
+    width: 30%;
+    border-radius: 100%;
 }
 
 
