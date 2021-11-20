@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
-
-.sidenav {
-  height: 100%;
-  width: 190px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(6, 6, 7);
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration:navajowhite;
-  font-size: 20px;
-  color: #f2f6f8;
-  display: block;
-}
-
-.sidenav a:hover {
-  color: #1341da;
-}
-
-.main {
-  margin-left: 170px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
-padding: 0px 25px;
-}
-
-@media screen and (max-height: 400px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+        
+        .sidenav {
+            height: 100%;
+            width: 190px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(6, 6, 7);
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: navajowhite;
+            font-size: 20px;
+            color: #f2f6f8;
+            display: block;
+        }
+        
+        .sidenav a:hover {
+            color: #1341da;
+        }
+        
+        .main {
+            margin-left: 170px;
+            /* Same as the width of the sidenav */
+            font-size: 28px;
+            /* Increased text to enable scrolling */
+            padding: 0px 25px;
+        }
+        
+        .video-container {
+            margin-left: 200px;
+            margin-right: 30px;
+        }
+        
+        @media screen and (max-height: 400px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="sidenav">
-  <a href="tentangyangpunyaweb.html">Tentang aku</a>
-  <a href="riwayatpekerjaan.html">Riwayat pekerjaan</a>
-  <a href="kompetensi.html">Kompetensi</a>
-  <a href="#contact">Contact</a>
-</div>
+    <div class="sidenav">
+        <a href="tentangyangpunyaweb.html">Tentang aku</a>
+        <a href="riwayatpekerjaan.html">Riwayat pekerjaan</a>
+        <a href="kompetensi.html">Kompetensi</a>
+        <a href="#contact">Contact</a>
+    </div>
 
-<div class="main">
-  <h2>Hi, i'm Vertikal</h2>
-  <p> This Is Full Version Of Me</p>
-  <p>Scroll down the page to see the result.</p>
-  </div>
-   
+    <div class="main">
+        <h2>Hi, i'm Vertikal</h2>
+        <p> This Is Full Version Of Me</p>
+        <p>What your plan for tomorow??</p>
+    </div>
+    <div class="video-container">
+        <video width="300" height="320" autoplay controls>
+        <source src="videoweb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+
 </body>
-</html> 
+
+</html>
